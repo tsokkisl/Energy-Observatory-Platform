@@ -1,0 +1,37 @@
+# Backup files etc.
+
+*~
+\#*\#
+*.bak
+*.backup
+.*.sw[a-z]
+
+# Mac OS specific
+
+.DS_Store
+
+# Windows specific
+
+Thumbs.db*
+
+# Add anything else that should not be added to your repository.
+# Examples are:
+# - Object files and executables
+# - Large data files
+# - Files containing passwords, credentials, etc.
+# - Code dependencies
+
+# Dependencies
+node_modules/
+
+# Env
+back-end/.env
+
+# Data to upload
+cli-client/newdata/*
+
+# Auto generated
+cli-client/*.token
+back-end/uploaded_data.csv
+back-end/session
+back-end/data/*

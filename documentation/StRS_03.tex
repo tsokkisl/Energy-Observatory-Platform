@@ -1,0 +1,224 @@
+\documentclass[a4paper,12pt, oneside]{article}   	
+	
+\usepackage[utf8x]{inputenc}
+\usepackage[english,greek]{babel}
+\usepackage[margin=1.2in]{geometry}
+\usepackage[parfill]{parskip}    	
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{wrapfig}
+\usepackage{enumitem}
+\usepackage{fancyhdr}
+\usepackage{amsmath,amsfonts,amssymb}
+\usepackage{cite}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage{titlesec}
+\usepackage{index}
+\makeindex
+
+%SetFonts
+\usepackage{lmodern}
+%SetFonts
+\usepackage[breaklinks=true, unicode=true]{hyperref}
+
+\pagestyle{fancy}
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+\fancyhead[RE]{}
+\fancyhead[RO]{}
+\fancyfoot[RE, RO]{\thepage}
+
+
+\titleformat{\section}
+  {\normalfont\Large\bfseries}{\thesection}{1em}{}[{\titlerule[0.8pt]}]
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+
+\includegraphics[width=0.20\textwidth]{./img/NTUAlogo.jpg}~\\[0.1cm]
+\textsc{ ΕΘΝΙΚΟ ΜΕΤΣΟΒΙΟ ΠΟΛΥΤΕΧΝΕΙΟ}\\[0.2cm]  
+\textsc{ ΣΧΟΛΗ ΗΛΕΚΤΡΟΛΟΓΩΝ ΜΗΧΑΝΙΚΩΝ ΚΑΙ ΜΗΧΑΝΙΚΩΝ ΥΠΟΛΟΓΙΣΤΩΝ}\\[3cm] 
+
+
+\textbf{\LARGE \textlatin{Stakeholders Requirements Specification}}\\[0.01cm]
+\text{Σύμφωνα με το πρότυπο \textlatin{ISO/IEC/IEEE 29148:2011}}\\[2cm]
+
+\textbf{\Large Εμπλεκόμενο μέρος: Δημοσιογράφοι}\\[2cm]
+
+% Author and supervisor 
+\textbf{Ομάδα:  \textlatin{WeAreBack}}\\
+	Σταύρος Σταύρου \\
+	Λένος Τσοκκής \\ 
+	Κωνσταντίνα Φουντουραδάκη
+\vfill
+
+\end{center} 
+\end{titlepage}
+
+\thispagestyle{empty}
+\pagenumbering{gobble}% Remove page numbers (and reset to 1)
+\newpage
+
+\thispagestyle{empty}
+\pagenumbering{arabic}
+\setcounter{page}{2}
+\tableofcontents
+\newpage
+
+
+\section{Εισαγωγή}
+\subsection{Ταυτότητα - Επιχειρησιακοί στόχοι}
+Στόχος είναι η δημιουργία ενός συστήματος λογισμικού που εξασφαλίζει τη διαφάνεια στη λειτουργία της ευρωπαϊκής αγοράς ηλεκτρικής ενέργειας. Δίνει στα εμπλεκόμενα μέρη δυνατότητες διάθεσης, οπτικοποίησης και ανάλυσης \href{https://transparency.entsoe.eu}{ανοικτών δεδομένων.}
+
+Μέσω του συστήματος αυτoύ οι δημοσιογράγοι έχουν πρόσβαση σε δεδομένα κατανάλωσης/παραγωγής με μεγάλη ακρίβεια γεγονός που επιβάλει διαφάνεια στην αγορά ενέργειας έτσι μπορούν να ερευνήσουν εταιρίες με δισανάλογη παραγωγή - κατανάλωση για να εντοπίσουν σκάνδαλα. Επίσης, μπορούν να μαρκάρουν εταιρίες με ραγδαία αύξηση της παραγωγής ενέργειας και να ελέγξουν αν τηρούν  τους κανονισμούς  προστασίας του περιβάλλοντος.  Επιπλέον, οι δημοσιογράφοι έχουν πρόσβαση σε δεδομένα πρόβλεψης της παραγωγής ενέργειας για κάποιο συγκεκριμένο μήνα ή έτος μέσω των οποίων μπορούν να συμπεράνουν αυξομειώσεις στις τιμές και να ενημερώσουν τους αναγνώστες τους για αυτές τις προβλέψεις. Ακόμη, να υπολογίσουν, σύμφωνα με τα δεδομένα παραγωγής ενέργειας, τους εκπαιμπόμενους ρύπους για ένα νοικοκυριό στο διάστημα ενός έτος ανά τύπο. Έτσι προβάλοντας αυτή τη μελέτη να αποτρέψουν τους αναγνώστες τους από τις ρυπογόνες μορφές ενέργειας και να τους στρέψουν σε λιγότερο επιζήμιες για το περιβάλλον . 
+
+\subsection{Περίγραμμα επιχειρησιακών λειτουργιών}
+Ένας δημοσιογράφος, αφού συνδεθεί στο σύστημα μπορεί να πραγματοποιήσει αναζήτηση για τιμές κατανάλωσης ενέργειας πραγματικές ή εκτιμώμενες, να τις συγκρίνει καθώς και να αναζητήσει τις τιμές παραγωγής ενέργειας. Για αυτές τις λειτουργίες μπορεί να εφαρμόσει κάποια φίλτρα στα δεδομένα που θα του επιστραφούν, όπως περιοχή, χρονική ανάλυση, χρονικό διάστημα και τύπο ενέργειας, αλλά και να  επιλέξει το μορφότυπο τους.
+
+\newpage
+\section{Αναφορές-πηγές πληροφορίας}
+\begingroup
+%\renewcommand{\section}[2]{}
+\renewcommand{\section}{\subsection}
+\begin{thebibliography} {books}
+\latintext
+\bibitem{ISO2011} ISO/IEC 29148:2011 (IEEE Std 29148-2011), Systems and software engineering - Life cycle processes - Requirements engineering
+\bibitem{ISO25060} ISO/IEC TR 25060:2010  Systems and software engineering - Systems and software product Quality Requirements and Evaluation - Common Industry Format for usability: General framework for usability-related information
+\end{thebibliography}
+\endgroup
+\subsection*{Πηγές πληροφορίας}
+\begingroup
+\latintext
+\sloppy
+\begin{enumerate}
+\begin{sloppypar}
+   \item \href{https://transparency.entsoe.eu/content/static\_content/Static\%20content/knowledge\%20base/SFTP-Transparency\_Docs.html}{SFTP-Transparency Docs}
+   \end{sloppypar}
+\end{enumerate}
+\endgroup
+\greektext
+
+
+\section{Διαχειριστικές απαιτήσεις επιχειρησιακού περιβάλλοντος} 
+\subsection{Επιχειρησιακό μοντέλο}
+Η εφαρμογή θα λειτουργήσει και θα γίνει διαδεδομένη λόγω του ότι:
+\begin{itemize}
+  \item Η πλατφόρμα είναι αξιόπιστη καθώς εξασφαλίζει την ασφάλεια δεδομένων του χρήστη μέσω κρυπτογραφίας.
+  \item Οι χρήστες έχουν πρόσβαση σε μια μεγάλη βάση δεδομένων κατανάλωσης ενέργειας, που διαρκώς ενημερώνεται.
+  \item Παρέχει διαφάνεια στην λειτουργία της αγοράς ηλεκτρικής ενέργειας.
+    \item Διευκολύνει την πρόσβαση των δημοσιογράφων στον χώρο της ενέργειας για να τον ερευνήσουν.
+    \item Οι δημοσιογράφοι αντλούν δεδομένα για να τεκμηριώσουν τα άρθρα τους. 
+\end{itemize}
+
+
+\subsection{Περιβάλλον διαχείρισης πληροφοριών}
+Η σημερινή εικόνα για το περιβάλλον διαχείρισης πληροφοριών  στον τομέα της ηλεκτρικής ενέργειας περιλαμβάνει τους ακόλουθους οργανισμούς και πλατφόρμες. Η Ευρωπαϊκή ένωση παρέχει το σύστημα παρατήρησης \textlatin{EMOS} και ανά δύο χρόνια \href{https://ec.europa.eu/energy/en/data-analysis/market-analysis#gas-and-electricity-market-reports}{αναφορές} για την αγορά (τόσο τη βιομηχανική όσο και τα νοικοκυριά) ηλεκτρικής ενέργειας  που αναλύουν την εξέλιξη τιμών και όγκων κατανάλωσης καθώς και των αλληλεπιδράσεων μεταξύ των κρατών μελών της. Εταιρίες όπως η \href{https://www.enerdata.net}{\textlatin{Enerdata}}, \href{https://ec.europa.eu/eurostat/web/energy}{\textlatin{eurostat}}, \href{http://www.vaasaett.com}{\textlatin{vaasa ETT}} είναι μερικές από τις εταιρίες που προσφέρουν ανάλυση της αγοράς ενέργειας. 
+\newpage
+
+
+\section{Λειτουργικές απαιτήσεις επιχειρησιακού περιβάλλοντος}
+\subsection{Επιχειρησιακές διαδικασίες}
+Οι διαδικασίες της εφαρμογής που οι δημοσιογράφοι περιγράφονται ακολούθως.
+\renewcommand{\theenumi}{\Roman{enumi}}
+\renewcommand{\theenumii}{\arabic{enumii}}
+\renewcommand{\theenumiii}{\alph{enumiii}}
+
+\begin{enumerate}
+   \item Πρόσβαση - Απεικόνιση δεδομένων
+      \begin{enumerate}
+     \item ανά περιοχή \textlatin{(Scope)}
+     \item με συγκεκριμένη χρονική ανάλυση \textlatin{(Resolution)}
+     \item για δοσμένη χρονική στιγμή \textlatin{(date)}
+     \begin{enumerate}
+  	\item συγκεκριμένη ημερομηνία
+   	\item συγκεκριμένο μήνα και έτος	   	
+	\item συγκεκριμένο έτος
+     \end{enumerate}
+     \item με μορφότυπο \textlatin{format}
+     \begin{enumerate}
+  	\item \textlatin{JSON}
+   	\item \textlatin{.csv} αρχείο
+     \end{enumerate}
+   \end{enumerate}
+   \item Σύγκριση δεδομένων
+       \begin{enumerate}
+     \item ανά περιοχή \textlatin{(Scope)}
+     \item με συγκεκριμένη χρονική ανάλυση \textlatin{(Resolution)}
+     \item για δοσμένη χρονική στιγμή \textlatin{(date)}
+     \begin{enumerate}
+  	\item συγκεκριμένη ημερομηνία
+   	\item συγκεκριμένο μήνα και έτος	   	
+	\item συγκεκριμένο έτος
+     \end{enumerate}
+     \item με μορφότυπο \textlatin{format}
+     \begin{enumerate}
+  	\item \textlatin{JSON}
+   	\item \textlatin{.csv} αρχείο
+     \end{enumerate}
+   \end{enumerate}
+
+   \item Σύνδεση στο σύστημα
+    \begin{enumerate}
+     \item σύνδεση με όσο το δυνατό λιγότερα πεδία προς συμπλήρωση, όπου \\ απαραίτητα είναι τα \textlatin{username} και  \textlatin{password}
+     \item ανάκτηση κωδικού πρόσβασης
+    \end{enumerate}
+  \item Αποσύνδεση από το σύστημα
+  \item Έλεγχος συνδεσιμότητας μεταξύ του χρήστη και της βάσης δεδομένων \textlatin{(HealthCheck)}
+\end{enumerate}
+
+
+\subsection{Δείκτες ποιότητας}
+Δείκτες ποιότητας που σηματοδοτούν τη σωστή λειτουργία της εφαρμογής είναι ο μέσος αριθμός νέων χρηστών ανά ημέρα καθώς και το μεγάλο πλήθος εγγεγραμμένων χρηστών. Επιπλέον πολύ βασική ένδειξη ποιότητας είναι  η συχνότητα επισκέψεων των χρηστών. Ακόμη, δείκτης ποιότητας της πλατφόρμας είναι το πλήθος των δεδομένων με το οποίο ενημερώνεται αλλά και το εύρος περιοχών που καλύπτει. Τέλος καλό στατιστικό είναι και ο αριθμός κλήσεων ανά λειτουργική διαδικασία.
+
+\renewcommand{\theenumi}{\arabic{enumi}}
+\renewcommand{\theenumii}{\alph{enumii}}
+\begin{enumerate}
+   \item Ασφάλεια 
+   \begin{enumerate}
+     \item Τα στοιχεία των εγγεγραμμένων χρηστών είναι κρυπτογραφημένα.
+     \item Χρήση πρωτοκόλλου \textlatin{HTTPS} για ασφαλή δικτυακή σύνδεση στην οποία τα δεδομένα ανταλλάσονται κρυπτογραφημένα.
+   \end{enumerate}
+   \item Περιεχόμενο της πλατφόρμας
+   \begin{enumerate}
+     \item Έγκαιρο, αφού καταχωρούνται καθημερινά στην πλατφόρμα νέα δεδομένα.
+     \item Έγκυρα δεδομένα, τα οποία χρησιμοποιούνται και από τα κράτη μέλη της Ευρωπαϊκής Ένωσης.
+     \item Ευρείας χωρικής κάλυψης
+     \item Δεδομένα μονίμως καταχωρημένα, καθώς δεν διαγράφονται όταν απαρχαιωθούν.
+   \end{enumerate}
+\end{enumerate}
+
+
+\section{Έκθεση απαιτήσεων χρηστών}
+Ένας δημοσιογράφος απαιτεί από την εφαρμογή εύκολη παρακολούθηση των τιμών της ενέργειας ανά τύπο μέσω διαγραμμάτων και να λαμβάνει ειδοποιήσεις όποτε οι τιμές τους αυξάνονται ή πέφτουν σε τοπικό ελάχιστο για να κοινοποιεί τις αλλαγές  στις τιμές των καυσίμων σε πλατφόρμες πιο προσιτές για το γενικό κοινό . Ακόμη, να  δημιουργεί \textlatin{bots} που τον ενημερώνουν για τις κατηγορίες προϊόντων που τον ενδιαφέρουν. Επιπλέον, ζητούν δυνατότητα ταξινόμησης των εταιριών, όχι μόνο με χρονική σειρά, αλλά και με φθίνουσα παραγωγή σε \textlatin{MWh}, καθώς και σύνθετα φίλτρα ώστε να διευκολύνεται ο εντοπισμός ύποπτων εταιριών, που περιγράφθηκαν στους επιχειρησιακούς στόχους. Τέλος, επιθυμεί ασφαλή  αλληλεπίδραση και συμμόρφωση του συστήματος με τη διάταξη περί προστασίας προσωπικών δεδομένων \textlatin{(GPDR)}.
+
+
+\section{Αρχές του προτεινόμενου συστήματος}
+Οι δημοσιογράφοι επιθυμούν διεπαφή εύκολη στη χρήση, με αξιόπιστη ομαλή λειτουργία  και εύμορφη, κατανοητή οπτικοποίηση των αποτελεσμάτων ώστε με στοιχειώδεις γνώσεις να μπορούν να τα διαβάσουν.  Ακόμη, απαραίτητη αρχή συνιστά η προστασία από υποκλοπή των στοιχείων τους με χρήση κρυπτογραφίας. Τέλος, τα έγγραφα τεκμηρίωσης της εφαρμογής να είναι στα ελληνικά.
+
+
+\section{Περιορισμοί στο πλαίσιο του έργου}
+Περιορισμοί στο πλαίσιο του έργου αποτελούν:
+\begin{itemize}
+  \item Δυσκολία κατανόησης της χρήσης του \textlatin{CLI}
+  \item Δυσκολία κατανόησης της χρήσης του \textlatin{SSH} για σύνδεση στο \textlatin{server}
+  \item Απαιτείται σύνδεση στο διαδίκτυο για πρόσβαση σε τιμές που δεν είχαν ήδη ανακτηθεί ως \textlatin{.csv} αρχείο
+  \item Η γλώσσα των δεδομένων και των διεπαφών είναι η αγγλική
+  \item Η εφαρμογή δεν διαθέτει ονόματα των εταιριών παραγωγής και παροχής ενέργειας παρά μόνο τοποθεσίες      
+  \item Περιορισμένο αριθμό κλήσεων της εφαρμογής ανά ημέρα
+\end{itemize}
+\newpage
+
+\section{Παράρτημα: ακρωνύμια και συντομογραφίες}
+\textlatin{\textbf{EMOS} Environmental Management Overview Strategy\\
+\textbf{REST API}  RESTful Application Programming Interface\\
+\textbf{CLI} Command Line Interface\\
+\textbf{JSON} JavaScript Object Notation\\
+\textbf{HTTPS} Hypertext Transfer Protocol Secure\\
+\textbf{SSH} Secure Shell \\
+\textbf{GDPR} General Data Protection Regulation
+}
+
+\end{document}  
